@@ -40,7 +40,7 @@ require('turbo-potato')(gulp);
 
 "dependencies": {
   "gulp": "^4.0.0",
-  "turbo-potato": "^0.1.0",
+  "turbo-potato": "^1.0.0",
   ...
 },
 ```
