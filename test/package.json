@@ -1,0 +1,13 @@
+{
+  "name": "turbo-potato-test",
+  "version": "0.1.0",
+  "description": "test",
+  "main": "gulpfile.js",
+  "contributors": [
+    "Benjamin Papp (https://github.com/nimajnebp)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}

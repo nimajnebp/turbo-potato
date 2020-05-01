@@ -1,0 +1,36 @@
+{
+  "name": "turbo-potato",
+  "version": "1.0.0",
+  "description": "frontend development tools packaged as a Node module.",
+  "main": "index.js",
+  "contributors": [
+    "Benjamin Papp (https://github.com/nimajnebp)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nimajnebp/turbo-potato.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "acorn": "^7.1.1",
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-uglify": "^3.0.2",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
