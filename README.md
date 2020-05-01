@@ -59,3 +59,11 @@ require('turbo-potato')(gulp);
 │ ├── css
 │ └── js
 ```
+
+#### Embedded features
+- `sourcemaps` for sass
+- `postcss` using `cssnano` `autoprefixer` `broserslist`
+- `stylelint`
+- `babel` for js, implementing `@babel/preset-env"`
+- `eslint` using `eslint-config-airbnb-base`
+- `uglify`

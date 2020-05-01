@@ -1,7 +1,9 @@
-//
-// @File
-//
-//
+/**
+ * @File
+ * Gulp powered frontend tools.
+ *
+ */
+
 const config = {
   sass: {
     srcFiles: ["./src/scss/**/*.scss", "./src/scss/**/*.css"],
@@ -18,9 +20,9 @@ const config = {
   }
 };
 
-// Imports (dependencies)
-// ===================
-
+/**
+ * Imports.
+ */
 const gulpStylelint = require("gulp-stylelint");
 const gulpSass = require("gulp-sass");
 const gulpSourcemaps = require("gulp-sourcemaps");
@@ -30,11 +32,15 @@ const gulpEslint = require("gulp-eslint");
 const gulpBabel = require("gulp-babel");
 const gulpUglify = require("gulp-uglify");
 
-// PostCSS plugins.
+/**
+ * PostCSS plugins.
+ */
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 
-// Option sets provider.
+/**
+ * Option sets provider.
+ */
 const options = {
   gulpStylelint: {
     reporters: [{ formatter: "string", console: true }],
@@ -52,7 +58,9 @@ const options = {
   },
 };
 
-// Plugins sets provider.
+/**
+ * Plugin sets provider.
+ */
 const plugins = {
   gulpPostcss: [
     autoprefixer(options.gulpAutoprefixer),
@@ -60,11 +68,12 @@ const plugins = {
   ],
 };
 
-
-
+/**
+ * Main export.
+ */
 module.exports = (gulp) => {
-  // SASS
-  // ====
+  // SASS TASKS
+  // ==========
 
   // Task: sourcemap, sass, postcss([autoprefix, cssnano])
   const taskSass = () =>
@@ -96,8 +105,8 @@ module.exports = (gulp) => {
   taskSassLintFix.description = "Task to fix sass lint.";
   gulp.task(taskSassLintFix);
 
-  // JavaScript
-  // ==========
+  // JavaScript TASKS
+  // ================
 
   // Task: babel, uglify
   const taskJS = () =>
