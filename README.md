@@ -1,9 +1,9 @@
 # Turbo-Potato
 
-
 ### Description
 
 - Gulp based tool for frontend assets management like sass/js compiling, minifying, linting, etc.
+- Npm [https://www.npmjs.com/package/turbo-potato]
 
 
 ### Featured tasks
