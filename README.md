@@ -39,6 +39,7 @@ require('turbo-potato')(gulp);
 ```
 // package.json
 
+...
 "dependencies": {
   "gulp": "^4.0.0",
   "turbo-potato": "^1.0.0",
@@ -51,8 +52,9 @@ require('turbo-potato')(gulp);
   "defaults"
 ],
 "stylelint": {
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-twbs-bootstrap/scss"
 },
+...
 ```
 
 ### Supported file structure
