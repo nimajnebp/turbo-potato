@@ -44,6 +44,15 @@ require('turbo-potato')(gulp);
   "turbo-potato": "^1.0.0",
   ...
 },
+"eslintConfig": {
+  "extends": "airbnb-base"
+},
+"browserslist": [
+  "defaults"
+],
+"stylelint": {
+  "extends": "stylelint-config-standard"
+},
 ```
 
 ### Supported file structure
