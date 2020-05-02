@@ -31,7 +31,7 @@
 ```
 // gulpfile.js
 
-var gulp = require('gulp');
+const gulp = require('gulp');
 require('turbo-potato')(gulp);
 ```
 
