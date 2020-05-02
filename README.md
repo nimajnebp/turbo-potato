@@ -4,7 +4,7 @@
 
 - Gulp based tool for frontend assets management like sass/js compiling, minifying, linting, etc.
 - Npm [https://www.npmjs.com/package/turbo-potato]
-- This package is to standardize quality assurance tool confings (sass: stylint-config-standard, js: eslint-config-airbnb-base, browserslist: defaults, babel: @babel/env), hence the lack of customization.
+- This package is to standardize quality assurance tool confings (sass: stylelint-config-twbs-bootstrap/scss, js: eslint-config-airbnb-base, browserslist: defaults, babel: @babel/env), hence the lack of customization.
 
 
 ### Featured tasks
