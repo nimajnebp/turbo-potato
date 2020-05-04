@@ -1,13 +1,11 @@
 # Turbo-Potato
 
-### Description
+## Description
 
-- Gulp based tool for frontend assets management like sass/js compiling, minifying, linting, etc.
+- Gulp based tool for frontend assets management like sass/js compiling, minifying, linting, etc. Read more below.
 - Npm [https://www.npmjs.com/package/turbo-potato]
-- This package is to standardize quality assurance tool confings (sass: stylint-config-standard, js: eslint-config-airbnb-base, browserslist: defaults, babel: @babel/env), hence the lack of customization.
 
-
-### Featured tasks
+### Featured gulp tasks
 ```
 ├── sass           Task to compile sass files.
 ├── sass:lint      Task to lint sass files.
@@ -25,7 +23,17 @@
     ├── sass
     └── js
 ```
+### Embedded features/modules
+- SASS:
+    - `sourcemaps`
+    - `postcss` w/ plugins: `cssnano` `autoprefixer` `browserslist` 
+    - `stylelint` w/ config: `stylelint-config-twbs-bootstrap/scss`
 
+- JavaScript:
+    - `babel` w/ config: `@babel/preset-env` 
+    - `eslint` w/ config: `eslint-config-airbnb-base`
+    - `uglify`
+   
 
 ### Setup/Usage
 ```
@@ -66,16 +74,47 @@ require('turbo-potato')(gulp);
 │ └── scss
 
 
-// destination (output)
+// destination (output - created automatically)
 ├─┬ dist
 │ ├── css
 │ └── js
 ```
 
-#### Embedded features
-- `sourcemaps` for sass
-- `postcss` using `cssnano` `autoprefixer` `broserslist`
-- `stylelint`
-- `babel` for js, implementing `@babel/preset-env"`
-- `eslint` using `eslint-config-airbnb-base`
-- `uglify`
+### Available configurations
+
+The package comes with a set of standard configurations out of the box, but it is fully customizable.   
+
+Configuration can be altered/extended in your package.json by populating the following keys (For options, see their respective official documentation.):
+  -  `"eslintConfig"` - [Configuration options](https://eslint.org/docs/user-guide/configuring)
+  -  `"stylelint"` - [Configuration options](https://stylelint.io/user-guide/configure)
+  -  `"browserslist"` - (This provides config for `@babel/preset-env` and `autoprefixer`.) [Configuration options](https://github.com/browserslist/browserslist)
+
+
+### Additional configs for drupal projects
+```
+// package.json
+...
+"eslintConfig": {
+  ...
+  "extends": "airbnb-base"
+  "globals": {
+    "Drupal": true,
+    "drupalSettings": true,
+    "jQuery": true
+  },
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "Drupal"
+        ]
+      }
+    ]
+  },
+  ...
+},
+...
+```
+
