@@ -3,7 +3,7 @@
 ## Description
 
 - Gulp based tool for frontend assets management like sass/js compiling, minifying, linting, etc. Read more below.
-- Npm [https://www.npmjs.com/package/turbo-potato]
+- [Npm](https://www.npmjs.com/package/turbo-potato)
 
 ### Featured gulp tasks
 ```
@@ -37,19 +37,25 @@
 
 ### Setup/Usage
 ```
-// gulpfile.js
+// installation
+
+npm i gulp turbo-potato
+```
+
+```
+// into your gulpfile.js
 
 const gulp = require('gulp');
 require('turbo-potato')(gulp);
+...
 ```
 
-
 ```
-// package.json
+// into your package.json
 
 ...
 "dependencies": {
-  "gulp": "^4.0.0",
+  "gulp": "^4.0.2",
   "turbo-potato": "^1.0.0",
   ...
 },
