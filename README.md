@@ -1,11 +1,11 @@
 # Turbo-Potato
 
 ## Description
-
 - Gulp based tool for frontend assets management like sass/js compiling, minifying, linting, etc. Read more below.
 - [Npm](https://www.npmjs.com/package/turbo-potato)
 
-### Featured gulp tasks
+
+## Featured gulp tasks
 ```
 ├── sass           Task to compile sass files.
 ├── sass:lint      Task to lint sass files.
@@ -23,7 +23,9 @@
     ├── sass
     └── js
 ```
-### Embedded features/modules
+
+
+## Embedded features/modules
 - SASS:
     - `sourcemaps`
     - `postcss` w/ plugins: `cssnano` `autoprefixer` `browserslist` 
@@ -35,7 +37,7 @@
     - `uglify`
    
 
-### Setup/Usage
+## Setup/Usage
 ```
 // installation
 
@@ -71,7 +73,8 @@ require('turbo-potato')(gulp);
 ...
 ```
 
-### Supported file structure
+
+## Supported file structure
 
 ```
 // source (input)
@@ -86,17 +89,64 @@ require('turbo-potato')(gulp);
 │ └── js
 ```
 
-### Available configurations
 
-The package comes with a set of standard configurations out of the box, but it is fully customizable.   
+## Basic configurations (recommended)
 
-Configuration can be altered/extended in your package.json by populating the following keys (For options, see their respective official documentation.):
+The package comes with a set of standard configurations out of the box, but it is fully customizable.
+
+Configuration can be altered/extended in your `package.json` by populating the following keys (For options, see their respective official documentation.):
   -  `"eslintConfig"` - [Configuration options](https://eslint.org/docs/user-guide/configuring)
   -  `"stylelint"` - [Configuration options](https://stylelint.io/user-guide/configure)
   -  `"browserslist"` - (This provides config for `@babel/preset-env` and `autoprefixer`.) [Configuration options](https://github.com/browserslist/browserslist)
 
+## Advanced configurations (use with care)
 
-### Additional configs for drupal projects
+Optionally you can create a `.turbo-potatorc` file(JSON schema) and place it in to your project root.
+This config file provides more altering/extending options on the default config values.
+
+```
+// Default configs. 
+// Yout instance would be merged with this.
+{
+  "styles": {
+    "srcFiles": [
+      "./src/scss/**/*.scss",
+      "./src/scss/**/*.css"
+    ],
+    "srcDir": "./src/scss",
+    "distDir": "./dist/css"
+  },
+  "scripts": {
+    "srcFiles": [
+      "./src/js/**/*.js"
+    ],
+    "srcDir": "./src/js",
+    "distDir": "./dist/js"
+  },
+  "gulpSass": {
+    "outputStyle": "expanded"
+  },
+  "gulpBabel": {
+    "presets": [
+      "@babel/env"
+    ]
+  },
+  "gulpUglify": {},
+  "autoprefixer": {
+    "grid": "autoplace",
+    "remove": false
+  },
+  "cssnano": {
+    "presets": [
+      "default"
+    ]
+  }
+}
+
+```
+
+
+## Additional configs for drupal projects
 ```
 // package.json
 ...
@@ -123,4 +173,3 @@ Configuration can be altered/extended in your package.json by populating the fol
 },
 ...
 ```
-

@@ -1,0 +1,21 @@
+{
+  "styles": {
+    "srcFiles": [
+      "./src/scss/**/*.scss",
+      "./src/scss/**/*.css"
+    ],
+    "srcDir": "./src/scss",
+    "distDir": "./distTest/css"
+  },
+  "scripts": {
+    "srcFiles": [
+      "./src/js/**/*.js"
+    ],
+    "srcDir": "./src/js",
+    "distDir": "./distTest/js"
+  },
+  "autoprefixer": {
+    "grid": "autoplace",
+    "remove": false
+  }
+}
