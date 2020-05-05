@@ -9,5 +9,14 @@
   "license": "MIT",
   "dependencies": {
     "gulp": "^4.0.2"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-twbs-bootstrap/scss"
   }
 }

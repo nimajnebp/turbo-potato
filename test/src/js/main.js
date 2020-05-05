@@ -1,7 +1,7 @@
-//
-// @File
-// Test js.
-//
+/**
+ * @File
+ * Test script.
+ */
 
 const testFunction = () => {
   console.log('test js');
