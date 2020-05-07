@@ -1,6 +1,6 @@
 {
   "name": "turbo-potato",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Frontend development tools packaged as a Node module.",
   "main": "index.js",
   "contributors": [

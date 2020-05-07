@@ -183,8 +183,8 @@ module.exports = (gulp) => {
 
   // Task: watch
   const taskWatch = () => {
-    gulp.watch(config.styles.srcFiles, gulp.parallel(taskSassLint, taskSass));
-    gulp.watch(config.scripts.srcFiles, gulp.parallel(taskJSLint, taskJS));
+    gulp.watch(config.styles.srcFiles, { ignoreInitial: false }, gulp.parallel(taskSassLint, taskSass));
+    gulp.watch(config.scripts.srcFiles, { ignoreInitial: false }, gulp.parallel(taskJSLint, taskJS));
   };
   taskWatch.displayName = "watch";
   taskWatch.description = "Task to set up watchers for files in '/src'.";
