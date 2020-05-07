@@ -39,7 +39,7 @@
 
 ## Setup/Usage
 ```
-// installation
+// installation (terminal/command-line)
 
 npm i gulp turbo-potato
 ```
@@ -106,7 +106,7 @@ This config file provides more altering/extending options on the default config 
 
 ```
 // Default configs. 
-// Yout instance would be merged with this.
+// Your instance would be merged with this.
 {
   "styles": {
     "srcFiles": [
